@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta http-equiv="content-language" content="cs" />
+    <meta name="author" lang="cs" content="hisasann; http://hisasann.com/housetect/" />
+    <meta name="copyright" lang="cs" content="hisasann; http://hisasann.com/housetect/" />
+    <meta name="description" content="protoBox2d.js - Box2d JavaScript Library" />
+    <meta name="keywords" content="javascript,javascripter,java,actionscript,flash,art" />
+    <meta name="robots" content="all,follow" />
+    <link href="css/screen.css" type="text/css" rel="stylesheet" media="screen,projection" />
+	<style type="text/css" media="screen">
+		.protoBox2d{
+			margin-bottom: 20px;
+		}
+		
+		#imageWraper1 {
+			margin: 0px auto;
+			width: 700px;
+			height: 280px;
+			border: 1px dashed;
+			text-align: center;
+		}
+
+		.btn {
+			text-align: center;
+		}
+	</style>
+
+    <title>protoBox2d.js - Box2d JavaScript Library</title>
+  </head>
+  <body>
+    <div id="layout">
+      
+      <div id="header">
+        
+        <h1 id="logo"><a href="index.html">protoBox2d<span>.js</span></a></h1>
+        <hr class="noscreen" />   
+          
+        <div id="navigation">
+	        <ul>
+	          <li><a href="http://hisasann.com/" title="HOME">HOME</a></li>
+	          <li><a href="#documentation" title="DOCUMENTATION">DOCUMENTATION</a></li>
+	          <li><a href="#download" title="DOWNLOAD">DOWNLOAD</a></li>
+	        </ul>
+        </div>
+        <hr class="noscreen" />  
+      </div>
+      
+        <div id="main">
+        
+        <h2 id="products">Example</h2>
+		<div class="jMerrygoround">
+			<div id="imageWraper1">
+				<br>
+				<img class="box2d" src="img/google.png">
+				<br>
+				<input class="box2d" type="text" style="width: 400px">
+				<br><br>
+				<input class="box2d" type="button" value="Google検索" style="width: 100px">
+				<input class="box2d" type="button" value="I'm Feeling Lucky" style="width: 120px">
+				<br><br>
+				<input class="box2d" type="radio"/><span class="box2d">ウェブ全体から検索</span>
+				<input class="box2d" type="radio" value="lang_ja" /><span class="box2d">日本語のページを検索</span>
+				<a class="box2d" href="#">検索オプション</a> <span class="box2d">|</span> <a class="box2d" href="#">表示設定</a> <span class="box2d">|</span> <a class="box2d" href="#">言語ツール</a>
+			</div>
+			<br>
+			<div class="btn">
+				<input type="button" id="dobox2d" value="do box2d" alt="Do Box2dJs" title="do box2d"/>
+			</div>
+		</div>
+
+        <h2 id="documentation">Documentation</h2>
+		protoBox2d.jsは物理演算エンジンの<a href="http://box2d-js.sourceforge.net/index2.html" target="_blank">Box2DJS</a>を使いやすくしたJavaScript Libraryです。<br>
+		ややこしい演算の設定はprotoBox2d.jsがすべて吸収しますので、メソッドの呼び出しとHTMLにclass="box2d"を追加するだけで動作します。<br><br>
+		必要なライブラリーは以下のとおり。<br>
+		
+		<ul>
+			<li><a href="http://box2d-js.sourceforge.net/index2.html" target="_blank">Box2DJS - Physics Engine for JavaScript</a></li>
+			<li><a href="http://www.prototypejs.org/" target="_blank">Prototype.js</a> - version 1.6</li>
+		</ul>
+		
+		ただしBox2DJSは30個を超えるファイル数があるため、面倒な方は<a href="http://gist.github.com/92426" target="_blank">gist: 92426 - GitHub</a>から圧縮版ダウンロードしてください。<br>
+		
+		対応ブラウザは以下のとおりです。<br>
+		
+		<ul>
+			<li>IE 6 - 落下のみ可能</li>
+			<li>IE 7</li>
+			<li>Opera 9.5</li>
+			<li>Firefox 3.0.8</li>
+			<li>Safari 3.1 - <strong>推奨</strong></li>
+			<li>Goole Chrome 1.0 - <strong>推奨</strong></li>
+		</ul>
+		
+
+		<h3>サンプルコード</h3>
+		<h4>JavaScript</h4>
+		HTML属性のclassに"box2d"が指定された要素をbox2d側のエンジンに知らせます。<br>
+		以下のコード呼び出しだけで、HTML要素が落下しドラッグすることにより物理的動作を可能にします。
+		<textarea class="js" name="code">
+			new protoBox2d().init();
+		</textarea><br>
+		
+		<h4>HTML</h4>
+		たとえば↑のExampleの場合は以下のようなHTMLコードになります。<br>
+		HTMLタグに<strong>class="box2d"</strong>を指定してください。<br>
+		<textarea name="code" class="html">
+			&lt;div id="imageWraper1"&gt;
+				&lt;br&gt;
+				&lt;img class="box2d" src="img/google.png"&gt;
+				&lt;br&gt;
+				&lt;input class="box2d" type="text" style="width: 400px"&gt;
+				&lt;br&gt;&lt;br&gt;
+				&lt;input class="box2d" type="button" value="Google検索"&gt;
+				&lt;input class="box2d" type="button" value="I'm Feeling Lucky"&gt;
+				&lt;br&gt;&lt;br&gt;
+				&lt;input class="box2d" type="radio"/&gt;&lt;span class="box2d"&gt;ウェブ全体から検索&lt;/span&gt;
+				&lt;input class="box2d" type="radio" value="lang_ja" /&gt;&lt;span class="box2d"&gt;日本語のページを検索&lt;/span&gt;
+				&lt;a class="box2d" href="#"&gt;検索オプション&lt;/a&gt; &lt;span class="box2d"&gt;|&lt;/span&gt; &lt;a class="box2d" href="#"&gt;表示設定&lt;/a&gt; &lt;span class="box2d"&gt;|&lt;/span&gt; &lt;a class="box2d" href="#"&gt;言語ツール&lt;/a&gt;
+			&lt;/div&gt;
+		</textarea>
+		
+		<h4>CSS</h4>
+		特にスタイルの縛りはありませんが、box2dで動作させる要素にmarginが含まれていると見えないmargin部分で衝突してしまうため違和感が残る場合があります。
+		
+        <h2 id="download">Download</h2>
+		<ul>
+			<li>
+				<a href="http://gist.github.com/92433" target="_blank">gist: 92433 - GitHub</a>
+			</li>
+			<li>
+				<a href="http://lab.hisasann.com/protoBox2d/protoBox2d.zip">Zip</a>
+			</li>
+		</ul>
+
+        <!-- <table>
+          <tr class="table-top">
+            <td>Sample table</td>
+            <td>Sample table</td>
+            <td>Sample table</td>
+            <td>Sample table</td>
+          </tr>
+          <tr>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+            <td>Lorem ipsum</td>
+          </tr>
+          </table> -->
+          
+        </div>
+        </div>
+        <div id="footer">
+        <div id="footer-inside">
+        <p id="copyright">&copy; 2008 - <a href="http://hisasann.com/">hisasann</a></p>
+        
+        <!-- Please don't delete this. You can use this template for free and this is the only way that you can say thanks to me -->
+          <p id="dont-delete-this">Design by <a href="http://www.davidkohout.cz">David Kohout</a> | Our tip: <a href="http://www.goodmood.cz" title="Absinthe, Becherovka, Slivovitz store">Absinthe Store</a></p>
+        <!-- Thank you :) -->
+        
+        </div><div style="clear: both;"></div></div>
+		<script src="js/prototype.js"></script>
+		<script src="js/box2d.js"></script>
+		<script src="js/protoBox2d.js"></script>
+		<script src="js/jquery-1.3.2.js"></script>
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- syntax -->
+		<link rel="stylesheet" href="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Styles/SyntaxHighlighter.css" type="text/css" />  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shCore.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushXml.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushPhp.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushJScript.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushCss.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushJava.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/shBrushRuby.js"></script>  
+		<script type="text/javascript" src="http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/webscript.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			var j$ = jQuery.noConflict();
+			
+			j$(function() {
+				dp.SyntaxHighlighter.ClipboardSwf = 'http://hisasann.com/housetect/js/dp.SyntaxHighlighter/Scripts/clipboard.swf';
+				dp.SyntaxHighlighter.HighlightAll('code');
+
+				// fadeInOut
+				// j$("#logo").fadeOut().fadeIn();
+
+				// smooth scroller
+				j$("a[href^=#]").click(function() {
+					var hash = this.hash;
+					j$(j$.browser.safari ? 'body' : 'html')
+						.animate({scrollTop: j$(hash).offset().top}, 1500, "easeInOutBounce");
+					return false;
+				});
+				
+				j$("#dobox2d").click(function() {
+					new protoBox2d().init();
+				});
+			});
+		</script>
+  </body>
+</html>
